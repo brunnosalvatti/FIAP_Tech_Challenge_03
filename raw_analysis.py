@@ -24,16 +24,16 @@ print('\n')
 # Análise de Data Frames em flights.csv
 
 voos.columns = ['Ano','Mês','Dia','Dia da Semana','Companhia Aérea','Número do Voo',
-    'Número Aeronave','Aeroporto de Origem','Aeroporto de Destino',
-    'Horário Programado de Partida','Horário de Partida','Atraso de Partida',
-    'Tempo de Taxi até Decolagem','Momento de Decolagem',
-    'Tempo de Voo Planejado','Tempo Total do Voo','Tempo em Voo','Distância',
-    'Momento do Pouso','Tempo do Pouso até Desembarque',
-    'Horário Previsto de Chegada','Horário de Chegada','Atraso de Chegada',
-    'Desvio de Voo','Cancelado','Motivo de Cancelamento',
-    'Tempo de Atraso por Controle de Espaço Aéreo','Tempo de Atraso por Segurança',
-    'Atraso da Companhia','Atraso por Atraso de Aeronave Anterior',
-    'Atraso pelo Tempo']
+    'Número de Registro da Aeronave','Aeroporto de Origem','Aeroporto de Destino', 
+    'Horário Programado para Partida (HHMM)','Horário Real de Partida (HHMM)','Atraso na Partida',  
+    'Tempo Gasto até Decolagem','Horário em que o Avião Decolou (HHMM)',
+    'Tempo de Voo Planejado', 'Tempo Real de Voo','Tempo no Ar','Distância',
+    'Momento do Pouso (HHMM)','Tempo do Pouso até Desembarque',
+    'Horário de Chegada Programado (HHMM)','Horário de Chegada Real (HHMM)','Atraso de Chegada',
+    'Desvio de Voo','Status de Cancelamento','Motivo de Cancelamento',
+    'Atraso por Controle de Espaço Aéreo','Atraso por Segurança',
+    'Atraso da Companhia','Atraso por Aeronave Anterior',
+    'Atraso por Condições Meteorológicas']
 
 voos_nan_coluna = voos.isna().sum()
 print(voos_nan_coluna)
@@ -55,3 +55,6 @@ with open('raw/raw_missing_values.txt', 'w', encoding='utf-8') as f:
     f.write(voos_nan_coluna.to_string())
     f.write("\n\n")
 
+
+with open('raw/raw_flight_describe.txt', 'w', encoding='utf-8') as f:
+    f.write(voos.describe(include='all').to_string())

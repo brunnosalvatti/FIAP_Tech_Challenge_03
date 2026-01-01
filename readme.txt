@@ -67,6 +67,8 @@ insights:
 -- O heatmap parece indicar que existe uma correlação maior entre o horário da partida / horário da chegada e os atrasos
 -- Os horários a partir de 17:00 até 20:00 parecem incidir em maiores atrasos, provavelmente devido ao transito que afeta tanto operadores de aeroporto, quanto tripulantes 
 
+Além disso foi possível observar as correlações de cada coluna com a coluna alvo, sendo possível identificar as colunas mais interessantes para a construção de modelos de ML.
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 PCA.py
@@ -78,7 +80,13 @@ PCA.py
 
 ML.py
 
-
+Uma vez que a coluna 'Aeroporto de Origem' e 'Aeroporto de Destino' parecem ter misturas entre categorias e números, elas foram excluidas da análise.
+Buscou-se trabalhar com um ML de classificação, ou seja, não tenta se prever quanto um voo poderia atrasar, mas se ele atrasaria ou não.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
