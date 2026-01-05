@@ -5,7 +5,7 @@ Como os arquivos são muito grandes, eles devem ser baixados e colocados na past
 
 Link para download: https://drive.google.com/drive/folders/1aS7exW5N0qq1uIxvIBcAfc18OHojOMjj
 
-airlines.csv --> Planilha contendo o significado das siglaas
+airlines.csv --> Planilha contendo o significado das siglas
 airports.csv --> Planilha contendo o significado dos aeroportos
 flights.csv --> Planilha contendo as informações de voo
 
